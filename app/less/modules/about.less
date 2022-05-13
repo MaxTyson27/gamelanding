@@ -1,0 +1,48 @@
+.about {
+  .bgp('about.jpg', cover, center, top);
+  padding: 50px 0;
+
+  &__subtitle {
+    .bebas();
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+  }
+
+  &__title {
+    .bebas();
+    font-weight: 400;
+    font-size: 33px;
+    line-height: 33px;
+    letter-spacing: 3px;
+    max-width: 193px;
+
+  }
+
+  &__content {
+    margin-bottom: 40px;
+
+    &-text {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__content-top {
+    padding-bottom: 35px;
+    position: relative;
+    margin-bottom: 25px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 300px;
+      height: 1px;
+      right: 0;
+      bottom: 0;
+      background: #FFFFFF;
+    }
+  }
+}

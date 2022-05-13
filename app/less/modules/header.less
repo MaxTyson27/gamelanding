@@ -1,0 +1,146 @@
+.header {
+
+  .bgp('main.jpg', cover, center, bottom);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+
+  &__wrapper {
+    height: 100vh;
+    position: relative;
+  }
+
+  &__top {
+    margin-bottom: 200px;
+  }
+
+  &__title {
+    .bebas();
+    font-size: 80px;
+    line-height: 80px;
+    font-weight: 400;
+    letter-spacing: 3px;
+  }
+
+  &__subtitle {
+    .bebas();
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    margin-bottom: 25px;
+  }
+
+  &__link {
+    .btn();
+    margin: 0 auto;
+    column-gap: 24px;
+
+    span {
+      &:first-child {
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          background-color: #1A1917;
+          opacity: 0.5;
+          height: 24px;
+          width: 1px;
+          right: -12px;
+          top: 0;
+        }
+      }
+    }
+  }
+
+  &__scroll-link {
+    position: absolute;
+    bottom: 50px;
+    .center-item-x();
+
+    &::before {
+      content: '';
+      position: absolute;
+      .bgp('icons/scrolldown.svg', contain, center, center);
+      width: 21px;
+      height: 10px;
+      bottom: -20px;
+      .center-item-x();
+    }
+  }
+
+}
+
+.menu {
+  &__list {
+
+    &-item {
+      &+& {
+        margin-left: 40px;
+      }
+    }
+  }
+}
+
+.lang {
+  margin-right: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    .lang__list {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &--selected {
+    padding-right: 15px;
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      right: 0;
+      top: 2px;
+      .bgp('icons/arrow-lang.svg', contain, center, center)
+    }
+  }
+
+  &__select {
+    cursor: pointer;
+
+    &+& {
+      padding-top: 5px;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: -19px;
+    top: 0;
+    width: 1px;
+    background-color: @primary;
+    opacity: 0.5;
+    height: 30px;
+  }
+
+  &__list {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    left: -5px;
+    bottom: -75px;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 3px;
+    padding: 8px 20px 10px 8px !important;
+    transition: all .3s;
+  }
+}

@@ -1,0 +1,6 @@
+mixin menu
+  nav.menu.col-9
+    ul.menu__list.d-flex.justify-content-center
+      each value, index in {MAIN : 'main', about : 'about', 'game features' : 'features', 'System requirements': 'requirements', quotes : 'quotes'}
+        li.menu__list-item 
+          a.menu__list-link.text-uppercase.text-white(href="#" + value)= index

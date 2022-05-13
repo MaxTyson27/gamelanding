@@ -1,0 +1,25 @@
+header.header
+  .container
+    .header__wrapper
+      .header__top.row.pt-3.align-items-center
+        +logo
+        +menu()
+        .header__box.d-flex.col-2
+          .header__lang.lang
+            span.lang--selected.text-uppercase ENG
+            ul.lang__list
+              li.lang__select.text-uppercase RUS
+              li.lang__select FRA
+              li.lang__select DEU
+          .header__icons.d-flex.gap-3
+            a.header__icons-link(href="#")
+              img(src="images/icons/xbox.svg", alt="xbox icon")
+            a.header__icons-link(href="#")
+              img(src="images/icons/steam.svg", alt="steam icon")
+      .header__content
+        h1.header__title.text-uppercase.text-center.text-white SURVIVE AT ALL COSTS
+        h4.header__subtitle.text-uppercase.text-center.text-white Experience new social battle royale game
+        a.header__link(href="#")
+          span Buy Now on Steam
+          span $14.99
+      a.header__scroll-link.text-uppercase(href="#about") The story
